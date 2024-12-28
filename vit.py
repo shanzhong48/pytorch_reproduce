@@ -176,10 +176,3 @@ class myViT(nn.Module):
         x = torch.mean(x, dim=1) if self.pool == 'mean' else x[:, 0]
 
         return self.mlp_head(x)
-
-# imags = torch.rand((5, 3, 64, 64))
-# myvit = myViT(64, 16, 10, 256, 4, 8, dim_head=32, mlp_dim=64, pool='cls')
-# with torch.no_grad():
-#     out = myvit(imags)
-
-# print(out.shape)
