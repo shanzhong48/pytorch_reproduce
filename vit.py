@@ -176,3 +176,5 @@ class myViT(nn.Module):
         x = torch.mean(x, dim=1) if self.pool == 'mean' else x[:, 0]
 
         return self.mlp_head(x)
+
+## test comment
